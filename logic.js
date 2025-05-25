@@ -21,7 +21,10 @@ for (let i = 0; i < number.length; i++) {
         if (gate) {
             currentValue2 += e.target.innerText;
         }
+        console.log("Current Value: " + currentValue);
+        console.log("Current Value 2: " + currentValue2);
     })
+
 }
 
 //event listener for clear button
@@ -104,4 +107,14 @@ reminder.addEventListener("click", function(e) {
 
     }
     console.log(operatorValue);
+})
+
+dot.addEventListener("click", function() {
+    currentValue += ".";
+    display.innerText = currentValue;
+    if (gate && !currentValue2.includes(".")) {
+        currentValue2 += ".";
+        display.innerText = currentValue;
+    }
+
 })
